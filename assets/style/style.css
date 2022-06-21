@@ -1,0 +1,224 @@
+/* CSS RESET */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --text-base: #afb6c2;
+  --text-title: #d4ccb6;
+  --background: #191816;
+  --form-background: #24221f;
+  --primary-color: #ffc632;
+  font-size: 62.5%;
+  --font-primary: 'Poppins', sans-serif;
+  --font-secondary: 'Roboto', sans-serif;
+}
+
+body{
+  background-color: var(--background);
+  color: #fff;
+  font-family: var(--font-primary);
+}
+
+.col-one{
+  padding: 4rem 2rem;
+}
+
+.col-two{
+  display: none;
+}
+
+/* FORMATAÇÃO HEADER */
+header{
+  margin-bottom: 3rem;
+}
+
+.wrapper-login{
+  margin-bottom: 2.7rem;
+}
+
+.wrapper-login h2{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--text-title);
+  font-size: 2.4rem;
+  margin-bottom: 5px;
+}
+
+.wrapper-login p{
+  color: var(--text-base);
+  font-family: var(--font-secondary);
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+} 
+
+.wrapper-input{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.wrapper-input label{
+  color: var(--text-base);
+  font-size: 1.6rem;
+  margin-bottom: 5px;
+}
+
+.wrapper-input input{
+  position: relative;
+  background-color: transparent;
+  border: 1px solid #868686;
+  border-radius: 4px;
+  color: var(--text-base);
+  padding-left: 3.5rem;
+  height: 45px;
+}
+
+.wrapper-input img{
+  position: absolute;
+  margin-top: 4.2rem;
+  margin-left: 1rem;
+  width: 100%;
+  max-width: 20px;
+}
+
+.wrapper-input input:focus{
+  outline: 2px solid var(--primary-color);
+}
+
+.wrapper-input .teste input:focus {
+  display: none;
+  background-image: url(../images/mail-focus.svg);
+  background-repeat: no-repeat;
+  max-width: 100px;
+  z-index: 1;
+}
+
+.image-atual{
+  display: none;
+}
+
+.image-email{
+  display: block;
+  background: url(../images/mail-focus.svg) no-repeat;
+  margin-top: 4.2rem;
+  margin-left: 1rem;
+  width: 100%;
+  height: 100px;
+  max-width: 20px;
+}
+
+/* FORMATAÇÃO CHECKBOX E ESQUECEU-A-SENHA */
+.wrapper-info{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+input[type=checkbox]{
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: 1px solid #868686;
+  border-radius: 4px;
+  width: 2rem;
+  height: 2rem;
+} 
+
+input[type=checkbox]:checked{  
+  background-color: var(--primary-color);
+  background-image: url(../images/check.svg);
+  background-repeat: no-repeat;
+}
+
+.wrapper-info-col-one{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--text-base);
+  font-size: 1.6rem;
+  font-family: var(--font-secondary);
+}
+
+.wrapper-info-col-two a{
+  color: var(--primary-color);
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 2.1rem;
+  text-decoration: none;
+}
+
+.wrapper-info-col-two a:hover{
+  color: #fbbc04;
+  text-decoration: underline;
+}
+
+
+/* FORMATAÇÃO DO BUTTON => ENTRAR */
+.wrapper-btn button{
+  border: none;
+  background-color: var(--primary-color);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: 0.015rem;
+  text-transform: uppercase;
+  margin: 2rem 0 1.4rem;
+  width: 100%;
+  height: 5rem;
+}
+
+.wrapper-btn button:hover{
+  background-color: #fbbc04;
+}
+
+.wrapper-btn p{
+  color: var(--primary-color);
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.wrapper-btn p a{
+  color: var(--primary-color);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.wrapper-btn p a:hover{
+  color: #fbbc04;
+  text-decoration: underline;
+}
+
+@media (min-width: 768px){
+  .container{
+    display: flex;
+    width: 100%;
+  }
+
+  .col-one{
+    width: 50%;
+    padding: 4rem;
+  }
+
+  .col-two{
+    display: block;
+    width: 60%;
+  }
+
+  .col-two img{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    margin: 0;
+  }
+}
+
+@media (min-width: 1024px){
+  .col-one{
+    width: 40%;
+  }
+}
